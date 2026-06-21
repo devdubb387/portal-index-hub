@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 资料索引与内容整理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9fafb;
+            font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        .page-wrap {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        /* —— hero 区块 —— */
+        .hero {
+            margin: 1.2rem 0 2.8rem;
+            border-bottom: 1px solid #e9edf2;
+            padding-bottom: 2.2rem;
+        }
+
+        .hero h1 {
+            font-weight: 500;
+            font-size: 2.2rem;
+            letter-spacing: -0.01em;
+            color: #0f172a;
+            margin-bottom: 0.7rem;
+        }
+
+        .hero p {
+            color: #475569;
+            font-size: 1.05rem;
+            max-width: 540px;
+        }
+
+        .hero .meta-tag {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            background: #f1f4f9;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            color: #475569;
+        }
+
+        /* —— 通用卡片 / 段落 —— */
+        .section-card {
+            margin: 2.6rem 0;
+        }
+
+        .section-title {
+            font-weight: 500;
+            font-size: 1.4rem;
+            margin-bottom: 0.9rem;
+            color: #0f172a;
+            border-left: 3px solid #94a3b8;
+            padding-left: 0.9rem;
+        }
+
+        .section-card p,
+        .faq-item p {
+            color: #334155;
+            margin-bottom: 0.9rem;
+        }
+
+        .advantage-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin: 1.6rem 0;
+        }
+
+        .advantage-item {
+            background: #ffffff;
+            padding: 1.2rem 1.4rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.03);
+            border: 1px solid #edf2f7;
+        }
+
+        .advantage-item h3 {
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: #0f172a;
+        }
+
+        .advantage-item p {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .faq-list {
+            margin-top: 0.8rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            color: #0f172a;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .link-sentence {
+            background: #ffffff;
+            padding: 1.2rem 1.4rem;
+            border-radius: 12px;
+            border: 1px solid #e9edf2;
+            margin: 2.4rem 0 1.2rem;
+            font-size: 0.98rem;
+        }
+
+        a {
+            color: #1a548e;
+            text-decoration: none;
+            border-bottom: 1px solid #b9c9dc;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            border-bottom-color: #1a548e;
+            color: #0b3b61;
+        }
+
+        .footer-note {
+            margin-top: 3.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .footer-note a {
+            border-bottom: none;
+            color: #64748b;
+        }
+
+        .footer-note a:hover {
+            color: #1e293b;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #eef2f6;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .advantage-item {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <!-- hero 区 -->
+        <div class="hero">
+            <h1>资料·索引·整理</h1>
+            <p>围绕游戏内容的检索与信息归档，为长期关注者提供结构化的参考路径。这里是一份持续更新的索引页面，聚焦于 <a href="https://portal-index-i-game.com.cn">爱游戏</a> 所涵盖的话题方向。</p>
+            <span class="meta-tag">整理方向 · 游戏资料辑录</span>
+        </div>
+
+        <!-- 优势区：从资料整理切入 -->
+        <div class="section-card">
+            <h2 class="section-title">为什么需要一份索引</h2>
+            <p>当游戏数量、版本说明、玩法变化不断堆积，零散的信息会逐渐失去可追溯性。通过筛选来源、归纳要点与标注关联，索引页面希望帮助读者更有效率地定位自己关心的部分，而不是被推送流裹挟。</p>
+            <div class="advantage-grid">
+                <div class="advantage-item">
+                    <h3>按主题聚合</h3>
+                    <p>将更新记录、背景设定、常见问题整理为独立条目，降低重复搜索的成本。</p>
+                </div>
+                <div class="advantage-item">
+                    <h3>链接而非收藏</h3>
+                    <p>每个条目直接指向具体内容页，避免“存了链接却忘记为什么存”的困扰。</p>
+                </div>
+                <div class="advantage-item">
+                    <h3>定期刷新</h3>
+                    <p>索引跟随内容变化而调整，过时或失效的条目会被标记或替换。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 说明区：从索引场景展开 -->
+        <div class="section-card">
+            <h2 class="section-title">索引适用的场景举例</h2>
+            <p>如果你正在回顾某个系列的作品顺序，或者需要对照不同时期的系统说明，一份按时间或类别排列的索引会比搜索引擎的结果串更有条理。以 <a href="https://portal-index-i-game.com.cn">爱游戏</a> 为锚点，索引尝试覆盖以下常见场景：</p>
+            <ul style="margin: 0.8rem 0 0.8rem 1.4rem; color: #334155;">
+                <li>版本更迭中的功能变化与对照</li>
+                <li>活动、任务或收集要素的触发条件整理</li>
+                <li>界面与设置选项的说明汇总</li>
+                <li>来自社区或官方的常用问答条目</li>
+            </ul>
+            <p style="margin-top: 1rem;">当然，没有任何索引是完备的，遗漏与错误难以避免，这正是它需要长期维护的原因。</p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="section-card">
+            <h2 class="section-title">常见疑问 · 摘录</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <strong>索引和官方文档有什么不同？</strong>
+                    <p>官方文档通常是产品视角，按功能模块撰写；而索引更偏向使用者的查找习惯——按问题、场景或关键词组织。两者互为补充。</p>
+                </div>
+                <div class="faq-item">
+                    <strong>条目会保持更新吗？</strong>
+                    <p>会，但不承诺具体频率。如果发现链接失效或者内容过时，欢迎通过相关渠道提醒，但目前没有单独的反馈表单。</p>
+                </div>
+                <div class="faq-item">
+                    <strong>索引包含所有内容吗？</strong>
+                    <p>不。索引只收录经过筛选和重述的条目，目的是减少信息噪音，而非追求数量上的完整。未收录不代表不重要，可能只是暂未整理。</p>
+                </div>
+            </div>
+            <p style="margin-top: 1.2rem; font-size: 0.95rem;">更多条目与说明可以在 <a href="https://portal-index-i-game.com.cn">爱游戏</a> 索引总目录中找到。每个季度会做一次整体复核。</p>
+        </div>
+
+        <!-- 嵌入链接的自然句子，底部辅助说明 -->
+        <div class="link-sentence">
+            <p style="margin: 0;">如果你正在寻找一个相对清晰的起点，不妨从 <a href="https://portal-index-i-game.com.cn">爱游戏</a> 的索引主页开始浏览。按照资料类型分类的列表会帮助你判断哪些部分与自己当前的需求有关。</p>
+        </div>
+
+        <!-- 底部链接 与 相关参考 -->
+        <div class="footer-note">
+            <span>c40e909cf235b923 · 仅用于变化</span>
+            <span><a href="#">返回索引</a> · <a href="#">关于此页</a></span>
+        </div>
+        <hr>
+        <div style="color: #64748b; font-size: 0.8rem; text-align: left;">
+            <span>本页为资料整理示例，不构成任何指导或承诺。所有引用内容以来源页面为准。</span>
+        </div>
+    </div>
+</body>
+</html>
