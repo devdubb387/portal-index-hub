@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>完美电竞 · 产品说明与访问指南</title>
+    <style>
+        /* 重置与基调 */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'Songti SC', serif;
+            background-color: #faf6f0;  /* 米白基底 */
+            color: #2c2b28;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page-wrap {
+            max-width: 840px;
+            width: 100%;
+            background-color: #fcf9f5;
+            padding: 2rem 2.4rem 3rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        /* 文章排版氛围 */
+        h1 {
+            font-weight: 500;
+            font-size: 2.1rem;
+            letter-spacing: 0.02em;
+            color: #2f2d29;
+            margin-top: 0.4rem;
+            margin-bottom: 0.25rem;
+            border-left: 5px solid #9b8b7a;
+            padding-left: 1.2rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #7a7066;
+            margin-bottom: 2.2rem;
+            padding-left: 1.8rem;
+            border-bottom: 1px solid #e0d8ce;
+            padding-bottom: 0.85rem;
+            font-style: italic;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 1.4rem;
+            margin-top: 2.2rem;
+            margin-bottom: 0.8rem;
+            color: #3b3732;
+            border-bottom: 1px dashed #d9cfc2;
+            padding-bottom: 0.25rem;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 1.15rem;
+            margin-top: 1.6rem;
+            margin-bottom: 0.4rem;
+            color: #4f4942;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        /* 提示框 / 引用块 差异化设计 */
+        .insight-block {
+            background-color: #f2ece4;
+            border-left: 6px solid #a59483;
+            padding: 1.3rem 1.6rem;
+            margin: 1.6rem 0 1.8rem;
+            border-radius: 0 14px 14px 0;
+            font-size: 0.98rem;
+            box-shadow: inset 1px 1px 6px rgba(0,0,0,0.02);
+        }
+
+        .insight-block strong {
+            color: #4b4036;
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+
+        .caution-note {
+            background: #f6efe7;
+            border-radius: 18px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.8rem 0 1.4rem;
+            border: 1px solid #dacfc2;
+            font-size: 0.95rem;
+            color: #3d3831;
+        }
+
+        .caution-note::before {
+            content: "ⓘ 使用提醒";
+            display: block;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.03em;
+            color: #6a5f53;
+            margin-bottom: 0.4rem;
+            border-bottom: 1px dotted #cbbeb0;
+            padding-bottom: 0.3rem;
+        }
+
+        /* 列表精炼 */
+        ul.feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0.8rem 0 1.4rem;
+        }
+
+        ul.feature-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+        }
+
+        ul.feature-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #8c7c6a;
+            font-size: 1.2rem;
+        }
+
+        /* 内联链接 */
+        a {
+            color: #7a5f4a;
+            text-decoration: none;
+            border-bottom: 1px solid #c7b7a6;
+            transition: border-color 0.15s, color 0.15s;
+            font-weight: 500;
+        }
+
+        a:hover, a:focus {
+            color: #4a382b;
+            border-bottom-color: #7a5f4a;
+        }
+
+        /* 引用块变体（FAQ摘要） */
+        .faq-mini {
+            background: transparent;
+            border: 1px solid #e3d9ce;
+            border-radius: 14px;
+            padding: 1rem 1.4rem;
+            margin: 1.4rem 0;
+            background-color: #f9f4ed;
+        }
+
+        .faq-mini dt {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            color: #3c362f;
+        }
+
+        .faq-mini dd {
+            margin-left: 0.4rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: #4f4840;
+        }
+
+        .faq-mini dd:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* 间距与响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            .page-wrap {
+                padding: 1.5rem 1.2rem 2.2rem;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+            .subhead {
+                padding-left: 1rem;
+                font-size: 0.9rem;
+            }
+            .insight-block {
+                padding: 1rem 1.2rem;
+            }
+        }
+
+        /* 小装饰 */
+        .separator-dash {
+            width: 50px;
+            height: 2px;
+            background: #d7ccc0;
+            margin: 0.5rem 0 1.2rem;
+        }
+
+        .footnote-meta {
+            margin-top: 2.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e2d7ca;
+            font-size: 0.85rem;
+            color: #7d7265;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <h1>完美电竞 · 简明产品说明</h1>
+    <div class="subhead">一份偏向知识与使用视角的功能摘要 · 访问提醒</div>
+
+    <p>
+        如果你正在寻找一个整合了赛事资讯、对局数据和社区氛围的电子竞技平台，<a href="https://cn-site-wanmei.com">完美电竞</a> 
+        或许能满足你对信息密度与工具实用性的双重期待。它并非单纯的门户站点，而更像围绕电竞场景搭建的辅助系统——从赛程追踪到个人数据复盘，都试图为玩家和观众减少信息碎片带来的决策负担。
+    </p>
+
+    <h2>核心摘要：平台定位与内容构成</h2>
+    <p>
+        完美电竞主要面向对竞技深度有要求的用户：包括职业赛事观众、半职业训练者以及数据爱好者。平台聚合了主流赛事的实时比分、选手档案、战队动态，同时也提供基于公开比赛记录的对局分析工具。信息流按照赛事周期与战队活跃度更新，避免过度泛娱乐化，保持与竞技本身的相关性。
+    </p>
+    <div class="insight-block">
+        <strong>📋 一份简明指南</strong>
+        使用前建议明确自己的关注范围：是跟踪特定联赛（如 Major / 地区联赛），还是需要回顾个人对局数据？完美电竞的模块组织偏重“赛事—战队—选手”链路，直接搜索比浏览首页更高效。如果你是初次接触，不妨先从「战队」栏目的近期战绩开始，再延伸至具体选手的生涯数据。
+    </div>
+
+    <h2>亮点功能与设计逻辑</h2>
+    <p>
+        与一般资讯站不同，平台在以下细节上做了差异化处理，我们将其归纳为三个可用层：
+    </p>
+    <ul class="feature-list">
+        <li><strong>实时数据看板</strong> – 比赛进行时的回合经济、击杀/死亡地图、选手道具使用统计，粒度细到单局，且更新延迟控制在可接受范围内。适合需要边看比赛边查数据的用户。</li>
+        <li><strong>历史对局仓库</strong> – 收录近三年的顶级赛事录像回放（带时间戳和简评），支持通过英雄/地图/选手等条件筛选，用于复盘或战术学习。</li>
+        <li><strong>个人绑定与统计</strong> – 通过关联公开账号，可拉取自身对局的基础表现数据（KDA、经济曲线、常用道具等）。注意该功能依赖于官方接口的开放程度，并非所有区服都能完整支持。</li>
+    </ul>
+    <p>
+        这些功能都围绕“降低信息提取成本”这一逻辑，而非堆砌视觉动效。因此页面布局偏紧凑，文字密度较高，需要用户主动探索。
+    </p>
+
+    <h2>使用建议：如何获得更好体验</h2>
+    <p>
+        基于平台的内容结构，我们总结了几条务实的使用思路：
+    </p>
+    <div class="caution-note">
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 0.5rem;">① 善用搜索与筛选：直接搜索战队缩写或选手 ID 通常快于菜单浏览；赛事页面内的时间线筛选器可压缩信息范围。</li>
+            <li style="margin-bottom: 0.5rem;">② 关注数据更新频次：完美电竞的数据流依赖赛事方和接口提供方，休赛期或非直播时段部分模块可能处于静态状态，属于正常现象。</li>
+            <li style="margin-bottom: 0;">③ 移动端适配以阅读为主：触屏操作下的筛选组件响应良好，但数据表格的横向滚动需要适应；建议复杂分析场景使用桌面端。</li>
+        </ul>
+    </div>
+
+    <h2>访问说明 · 客观提醒</h2>
+    <p>
+        完美电竞是一个独立的第三方信息整合平台，其数据来源包括公开赛事记录、官方接口及社区贡献。平台本身不提供游戏客户端、外挂、代练或任何违反用户协议的服务。用户在使用时应自行判断信息准确性，尤其在涉及个人账号关联时，请确认授权范围。
+    </p>
+    <p>
+        另外，由于国内外网络环境差异，部分赛事图片或视频流可能加载较慢。如果你在访问过程中遇到页面样式异常或数据缺失，可稍后重试或检查本地网络。平台未设置强制注册墙，大部分浏览功能无需登录。
+    </p>
+
+    <!-- FAQ 摘要 风格变化 -->
+    <h3>常见疑问摘要</h3>
+    <dl class="faq-mini">
+        <dt>是否需要付费订阅？</dt>
+        <dd>目前平台的核心浏览功能免费，包括赛事比分、数据统计和录像仓库。暂未发现强制收费模块。</dd>
+        <dt>个人数据更新延迟多久？</dt>
+        <dd>根据比赛接口状态，通常在对局结束后 10–30 分钟内同步；历史数据会持续补全，但早期赛事可能有遗漏。</dd>
+        <dt>完美电竞 是否提供社区讨论区？</dt>
+        <dd>页面内嵌有每场比赛的短评区域，但并非独立论坛。深度讨论建议移步战队或赛事专属社群。</dd>
+    </dl>
+
+    <div class="separator-dash"></div>
+    <p>
+        综合来看，完美电竞更适合那些已经对电竞赛事有一定了解、需要快速获取结构化数据的人。它不是一个“一键上手”的大众资讯站，而是偏向工具属性的信息集散地。如果你认同这种克制的设计方向，不妨通过 <a href="https://cn-site-wanmei.com">完美电竞</a> 开始探索，从一场比赛的细节数据里找到自己的观察角度。
+    </p>
+
+    <!-- 尾部简洁信息 -->
+    <div class="footnote-meta">
+        <span>产品说明页 · 知识型概述</span>
+        <span>信息截止至近期版本</span>
+    </div>
+
+</div>
+</body>
+</html>
